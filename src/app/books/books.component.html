@@ -1,0 +1,58 @@
+<nav>
+   
+    <button style="float:right"><a href="http://localhost:4200/"  style="text-decoration:none;" > Logout</a></button>&nbsp;&nbsp;
+    <button style="float:right"><a routerLink="/signup" style="text-decoration: none;">Signup</a></button>
+</nav>
+
+<form action="" [formGroup]="form">
+
+    <table>
+        <tr>
+            <th colspan="3" style="background-color: skyblue;height:30px">
+                <label for="">Add Books Here</label>
+            </th>
+        </tr><br><br>
+        <tr>
+            <th>ID</th>
+            <th>Book Name</th>
+            <th>Author</th>
+
+        </tr><br>
+        <tr>
+            <th><input type="number" name="id" style="height: 20px;border-radius:10px;font-size: 15px;" [(ngModel)]="book.id" formControlName="id" placeholder="Book ID"></th>
+            <th><input type="text" name="book" style="height: 20px;border-radius:10px;font-size: 15px;" [(ngModel)]="book.name" formControlName="name" placeholder="Book Name"></th>
+            <th><input type="text" name="author" style="height: 20px;border-radius:10px;font-size: 15px;" [(ngModel)]="book.author" formControlName="author" placeholder="Author"></th>
+        </tr><br><br><br><tr>
+            <th colspan="3">
+        <input type="submit" value="Add" (click)="Add()" [disabled]="!form.valid" style="margin-left:30px;height: 40px;width:70px">
+        <input type="submit" value="View" (click)="View()"  style="margin-left:50px;height: 40px;width:70px">
+        <input type="submit" value="Update" (click)="Update()" [disabled]="!form.valid" style="margin-left:50px;height: 40px;width:70px">
+        <input type="submit" value="Delete" (click)="Delete()"  style="margin-left:50px;height: 40px;width:70px">
+    </th>
+    </tr>
+    </table>
+
+</form><br><br>
+<table class="ss">
+    <thead>
+      <tr class="s1">
+        <th colspan="3">Books Information</th>
+      </tr>
+        <tr class="s1">
+            <th class="s2">ID</th>
+            <th class="s2">Book Name</th>
+            <th class="s2">Author</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+       
+           <tr *ngFor="let books of b" class="s1">
+                <td class="s3">{{books.id}}</td>
+                <td class="s3">{{books.name}}</td>
+                <td class="s3">{{books.author}}</td>
+                
+              </tr> 
+  
+            </tbody>
+  </table>

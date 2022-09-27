@@ -1,0 +1,25 @@
+img{
+    height: 30px;
+    width:30px;
+    margin: 10px;
+    
+}
+nav{
+    background-color: skyblue;
+    height:50px;
+    margin-top: 0%;
+
+}
+
+table,th,tr,td{
+    border: solid black 1px;
+    border-radius: 5px;
+    border-collapse: collapse;
+    padding:10px
+}
+nav.span{
+    margin-top: 40px;
+}
+table{
+    margin-left:35%
+}

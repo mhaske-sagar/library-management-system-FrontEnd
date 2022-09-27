@@ -1,0 +1,29 @@
+<nav>
+    <button style="float:left"><a href="http://localhost:4200/"  style="text-decoration:none;" >Home</a></button>
+</nav>    
+<form action=""[formGroup]="form">
+    <table>
+        <tr>
+            <th colspan="2" style="background-color:skyblue;color:blue;height:40px;" >Login here</th>
+        </tr><br><br>
+        <tr>
+            <th><label>Username</label></th>
+            <th><input type="email" name="email"  style="height: 40px;border-radius:10px;font-size: 20px;" [(ngModel)]="u.email" formControlName="email" placeholder="First name"></th>
+        </tr>
+        
+        <tr>
+            <th><label>Password</label></th>
+            <th><input type="password" name="pass1" style="height: 40px;border-radius:10px;font-size: 20px;" [(ngModel)]="u.pass1" formControlName="pass1" placeholder="type password here"></th>
+        </tr>
+        
+        <br><br>
+        <input type="submit" value="login" (click)="login()" [disabled]="!form.valid" style="margin-left:130%;height: 40px;width:70px"><br><br>
+       <!-- <tr>
+            <th colspan="2"><span style="margin-left:0% ;font-size: medium;">Don't have account.click on signup</span></th>
+        </tr>
+        <input type="submit" value="Signup" (click)="signup()" style="margin-left:130%;height: 40px;width:70px">-->
+    </table><br><br>
+    
+    
+</form>
+

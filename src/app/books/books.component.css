@@ -1,0 +1,6 @@
+.ss,.s1,.s2,.s3{
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding:12px;
+    margin-left: 60px;
+}

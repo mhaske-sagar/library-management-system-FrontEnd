@@ -1,0 +1,38 @@
+
+<input type="submit" value="home" style="float:right" (click)="go()">
+<input type="submit" value="login" style="float:right" (click)="goon()">
+<form action=""[formGroup]="form" >
+    <table>
+        <tr>
+            <th colspan="2" style="background-color:skyblue;color:blue;height:40px;" >Registation for Admin</th>
+        </tr>
+        <tr>
+            <th><label>First Name</label></th>
+            <th><input type="text" name="Fname" required minlength="6" style="height: 40px;border-radius:10px;font-size: 20px;" [(ngModel)]="users.fname" formControlName="fname" placeholder="First name"></th>
+        </tr>
+        
+        <tr>
+            <th><label>Last Name</label></th>
+            <th><input type="text" name="lname" style="height: 40px;border-radius:10px;font-size: 20px;" [(ngModel)]="users.lname" formControlName="lname" placeholder="Last name"></th>
+        </tr>
+        <tr>
+            <th><label>Password</label></th>
+            <th><input type="password" name="pass1"  style="height: 40px;border-radius:10px;font-size: 20px;" [(ngModel)]="users.pass1" formControlName="pass1" placeholder="type password here"></th>
+        </tr>
+        <tr>
+            <th><label>Retype-password</label></th>
+            <th><input type="password" name="pass2"  style="height: 40px;border-radius:10px;font-size: 20px;" [(ngModel)]="users.pass2" formControlName="pass2" placeholder="type password here"></th>
+        <th>
+              
+        </th>
+        </tr>
+       
+        <tr>
+            <th><label>Email</label></th>
+            <th><input type="email" name="email"  style="height: 40px;border-radius:10px;font-size: 20px;" [(ngModel)]="users.email" formControlName="email" placeholder="First name"></th>
+        </tr><br><br>
+        <input type="submit" value="Signup" (click)="signup()" [disabled]="!form.valid" style="margin-left:120%;height: 40px;width:70px">
+    </table><br><br>
+    
+    
+</form>
